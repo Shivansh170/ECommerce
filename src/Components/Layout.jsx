@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 export default function Layout() {
   return (
     <>
-      <header>Hello I am the header</header>
-      <main>
-        <Outlet />
-      </main>
-      <footer>Hello I am the footer</footer>
+      <div className="min-h-screen flex flex-col">
+        <Header>Hello I am the header</Header>
+        <main className="grow">
+          <Outlet />
+        </main>
+        <Footer>Hello I am the footer</Footer>
+      </div>
     </>
   );
 }
